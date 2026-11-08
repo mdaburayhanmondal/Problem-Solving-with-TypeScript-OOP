@@ -17,4 +17,11 @@ function processInput(inp: string | number | boolean): string | number {
   } else {
     return 'Inactive';
   }
+}s
+
+function formatCoordinate(
+  coord: readonly [latitude: number, longitude: number, locationName: string],
+): string {
+  const [lat, longi, loc] = coord;
+  return `Location: ${loc} (${lat}, ${longi})`;
 }
