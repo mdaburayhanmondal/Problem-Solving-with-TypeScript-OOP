@@ -25,3 +25,9 @@ function formatCoordinate(
   const [lat, longi, loc] = coord;
   return `Location: ${loc} (${lat}, ${longi})`;
 }
+
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+  return arrays.reduce<T[]>((ac, cur) => {
+    return [...ac, ...cur];
+  }, []);
+}
